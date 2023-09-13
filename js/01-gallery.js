@@ -36,7 +36,7 @@ function openModal(event) {
     return;
   }
 
-    instance = basicLightbox.create(`div class = "modal"> 
+  instance = basicLightbox.create(`div class = "modal"> 
     <img src="${event.target.dataset.source}"> 
     </div>`);
 

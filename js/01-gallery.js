@@ -27,6 +27,8 @@ const renderImage = (arr, container) => {
 
 renderImage(galleryItems, ulGallery);
 
+let instance = null;
+
 function openModal(event) {
   event.preventDefault();
 
@@ -34,7 +36,7 @@ function openModal(event) {
     return;
   }
 
-  const instance = basicLightbox.create(`div class = "modal"> 
+    instance = basicLightbox.create(`div class = "modal"> 
     <img src="${event.target.dataset.source}"> 
     </div>`);
 

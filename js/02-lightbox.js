@@ -3,13 +3,7 @@ import { galleryItems } from "./gallery-items.js";
 
 const galleryList = document.querySelector(".gallery");
 
-createGallery();
-var lightbox = new SimpleLightbox(".gallery a", {
-  captionsData: "alt",
-  captionDelay: 250,
-  captionPosition: "bottom",
-  captions: true,
-});
+
 
 function createGallery() {
   const markup = galleryItems
@@ -21,5 +15,14 @@ function createGallery() {
 </li>`;
     })
     .join("");
+  
   galleryList.insertAdjacentHTML("afterbegin", markup);
 }
+
+createGallery();
+const lightbox = new SimpleLightbox(".gallery a", {
+  captionsData: "alt",
+  captionDelay: 250,
+  captionPosition: "bottom",
+  captions: true,
+});
